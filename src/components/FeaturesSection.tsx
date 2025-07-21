@@ -17,6 +17,7 @@ const FeaturesSection = () => {
       ],
       mockupImage: easternWhisperMockup,
       icon: <Globe className="w-6 h-6" />,
+      linkTo: "/eastern-whisper"
     },
     {
       title: "Narrative Tracker",
@@ -29,6 +30,7 @@ const FeaturesSection = () => {
       ],
       mockupImage: narrativeTrackerMockup,
       icon: <TrendingUp className="w-6 h-6" />,
+      linkTo: "/narrative-tracker"
     },
     {
       title: "Portfolio Politics",
@@ -41,6 +43,7 @@ const FeaturesSection = () => {
       ],
       mockupImage: portfolioPoliticsMockup,
       icon: <Users className="w-6 h-6" />,
+      linkTo: "/portfolio-politics"
     }
   ];
 

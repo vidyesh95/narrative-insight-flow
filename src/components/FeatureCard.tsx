@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface FeatureCardProps {
   title: string;
@@ -8,6 +9,7 @@ interface FeatureCardProps {
   mockupImage: string;
   icon: React.ReactNode;
   gradient?: string;
+  linkTo: string;
 }
 
 const FeatureCard = ({ 
@@ -16,7 +18,8 @@ const FeatureCard = ({
   features, 
   mockupImage, 
   icon,
-  gradient = "bg-gradient-card"
+  gradient = "bg-gradient-card",
+  linkTo
 }: FeatureCardProps) => {
   return (
     <div className={`${gradient} rounded-2xl border border-border/50 p-8 hover:border-primary/30 transition-all duration-500 hover:shadow-elevated group`}>
@@ -54,10 +57,12 @@ const FeatureCard = ({
       </div>
 
       {/* CTA */}
-      <Button variant="premium" className="w-full group-hover:bg-primary group-hover:text-white">
-        Explore {title}
-        <ArrowRight className="ml-2" />
-      </Button>
+      <Link to={linkTo}>
+        <Button variant="premium" className="w-full group-hover:bg-primary group-hover:text-white">
+          Explore {title}
+          <ArrowRight className="ml-2" />
+        </Button>
+      </Link>
     </div>
   );
 };
